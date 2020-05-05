@@ -1,0 +1,458 @@
+
+/* ERIC MEYER TY FOR THIS STYLES <3 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video 
+	margin: 0
+	padding: 0
+	border: 0
+	font-size: 100%
+	font: inherit
+	vertical-align: baseline
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section 
+	display: block
+
+body 
+	line-height: 1
+
+ol, ul 
+	list-style: none
+
+blockquote, q 
+	quotes: none
+
+blockquote:before, blockquote:after,
+q:before, q:after 
+	content: ''
+	content: none
+
+table 
+	border-collapse: collapse
+	border-spacing: 0
+
+/* END OF ERIC MEIER */
+
+@mixin wh100
+  min-width: 100%
+  min-height: 100vh
+
+@mixin main-font
+    font-family: 'Roboto', sans-serif
+    color: white
+
+@mixin dFjCaC 
+    display: flex
+    justify-content: center
+    align-items: center
+
+$mc1: #C8A35F
+$mc2: #2F343A
+
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap')
+
+//// Экстрамалые девайсы («телефоны», < 576px)
+//@ media (max-width: 575.98px)  ... 
+//
+//// Малые девайсы («ландшафтные», < 768px)
+//@ media (max-width: 767.98px)  ... 
+//
+//// Средние девайсы («таблетки», < 992px) 
+//@ media (max-width: 991.98px)  ... 
+//
+//// Большие девайсы (большие десктопы, < 1200px)
+//@ media (max-width: 1199.98px)  ... 
+//body
+//   overflow-x: hidden
+
+body
+    background-color: $mc2
+
+.wrapper
+    max-width: 1120px
+    height: 100%
+    margin: 0 auto
+    display: flex
+    padding: 0 10px
+    overflow: hidden
+
+.top-info, .first-info, section
+    width: 100%
+    
+.top-info
+    height: 45px
+    background-color: $mc1
+    @media (max-width: 575.98px) 
+        height: 60px
+    .wrapper
+        @include dFjCaC
+        @include main-font
+        justify-content: space-between
+        @media (max-width: 575.98px) 
+            flex-direction: column
+            
+.first-info
+    height: 100px
+    .wrapper
+        @include main-font
+        align-items: center
+        .logo-and-sources
+            width: 100%
+            display: flex
+            max-height: 100px
+            align-items: center
+            @media (max-width: 991.98px)
+                flex-direction: column
+                max-height: 100%
+                align-items: center
+            .navigation
+                display: flex
+                align-items: center
+                border-left: 1px solid white
+                img,
+                span
+                    padding-left: 20px
+            .logo,
+            .sources
+                width: 50%
+                @media (max-width: 991.98px)
+                    padding: 10px 0px
+            .logo
+                display: flex 
+                @media (max-width: 991.98px)
+                    justify-content: center   
+                div
+                    width: 50%
+                @media (max-width: 991.98px)
+                    div
+                        width: 40%
+                @media (max-width: 767.98px)
+                    justify-content: space-between
+                @media screen and ( max-width: 700px )
+                    width: 100%
+                @media screen and ( max-width: 900px )
+                    display: none                    
+            .sources
+                display: flex
+                align-items: center
+                justify-content: flex-end
+                font-size: 15px
+                @media screen and (max-width: 991.98px)
+                    justify-content: center
+                    min-width: 100%
+                span
+                    margin-left: 5%
+                    @media screen and ( max-width: 900px )
+                        margin: 0
+                @media screen and ( max-width: 900px )
+                    min-height: 100px
+                    flex-direction: column
+                    padding: 0
+                    justify-content: space-around
+                    align-items: center
+                    margin: 0
+
+.main
+    width: 100%
+    height: 620px
+    background: url('../img/work-1-assets/top-bg.png') center
+    background-size: cover
+    .wrapper
+        @include dFjCaC
+        .main-content
+            @include main-font
+            height: 245px
+            max-width: 920px
+            border: 1px solid $mc1
+            padding: 5px
+            display: flex
+            flex-direction: column
+            justify-content: center
+            @media screen and ( max-width: 300px )
+                padding: 10px 0
+            &__title
+                width: 100%
+                font-weight: bold
+                font-size: 64px
+
+                @media screen and ( max-width: 410px )
+                    font-size: 50px
+                    line-height: 60px
+                @media screen and ( max-width: 300px )
+                    font-size: 40px
+                    line-height: 50px
+                line-height: 75px
+                text-align: center
+                letter-spacing: 0.05em
+                text-transform: uppercase
+            &__subtitle
+                width: 100%
+                font-size: 18px
+                line-height: 28px
+                text-align: center
+
+.first
+    background: #393F47
+    z-index: 5
+    .wrapper
+        .first-screen
+            width: 100%
+            height: 561px
+            @include dFjCaC
+            div
+                width: calc(100%/3)
+                height: 100%
+                @include main-font
+            &__left
+                z-index: 15
+                div
+                    width: 100%
+                    height: 50%
+                &-top
+                    position: relative
+                    font-size: 40px
+                    line-height: 49px
+                    @media screen and ( max-width: 524px )
+                        font-size: 30px   
+                    letter-spacing: 0.05em
+                    text-transform: uppercase
+                    font-weight: bold
+                    display: flex
+                    flex-direction: column
+                    justify-content: flex-end 
+                    img
+                        position: absolute
+                        top: 40%
+                        left: 0    
+                    div
+                        margin-top: 50px
+                &-bottom
+                    font-size: 18px
+                    line-height: 28px
+                    button
+                        width: 220px
+                        height: 55px
+                        outline: none
+                        border: none
+                        text-transform: uppercase
+                        background: $mc1
+                        @include main-font
+                        @media screen and ( max-width: 524px )
+                            margin-top: 60px         
+            &__center
+                background-color: $mc2
+                z-index: 10
+                position: relative
+                img
+                    position: absolute
+                    top: 25%
+                    left: 23%
+                    @media screen and ( max-width: 776px )
+                        right: 20%
+                    
+.services-about
+    position: relative
+    width: 100%
+    height: 1350px   
+    .wrapper
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        height: 100%
+        @include main-font
+        .services
+            width: 100%
+            height: 505px
+            @media screen and ( max-width: 1123px )
+                margin-bottom: 200px
+            @media screen and ( max-width: 848px )
+                margin-bottom: 400px
+            @media screen and ( max-width: 420px )
+                margin-bottom: 0
+            &-img
+                width: 100%
+            &-table
+                display: block
+                width: 100%
+                margin-top: 40px
+                font-weight: bold
+                font-size: 40px
+                line-height: 49px
+                letter-spacing: 0.05em
+                text-transform: uppercase
+                margin-bottom: 60px
+            &-avia
+                height: 361px
+                max-width: 1108px
+                display: flex
+                flex-wrap: wrap
+                justify-content: center
+                &-block
+                    width: 276px
+                    height: 180px
+                    box-shadow: 0 0 2px black
+                    background: #393F47
+                    display: flex
+                    font-weight: bold
+                    font-size: 18px
+                    line-height: 22px
+                    text-align: center
+                    letter-spacing: 0.05em
+                    text-transform: uppercase
+                    flex-direction: column
+                    justify-content: space-evenly
+                    @media screen and ( max-width: 572px )
+                        max-width: 200px
+                        max-height: 150px
+                    @media screen and ( max-width: 420px )
+                        max-width: 120px
+                        max-height: 120px
+                        font-size: 12px       
+        .about
+            width: 100%
+            height: 500px 
+            display: flex
+            position: relative
+            @media screen and ( max-width: 332px )
+                margin-top: 100px
+            &-bg
+                position: absolute
+                background: #393F47
+                z-index: 0
+                height: 100%
+                width: 410px
+                left: 30%
+            &-left,
+            &-right
+                z-index: 1 
+            &-right
+                width: 55%
+                height: 100%
+                @media screen and ( max-width: 740px )
+                    display: none
+                @include dFjCaC
+                &__content
+                    display: flex
+                    flex-wrap: wrap
+                    div
+                        width: 200px
+                        height: 160px
+                        @media screen and ( max-width: 848px )  
+                            max-width: 150px
+                            max-height: 110px
+                            border: none
+                            box-shadow: none
+                        img
+                            @media screen and ( max-width: 848px )  
+                                min-width: 150px
+                                max-width: 150px
+                                min-height: 110px    
+                                max-height: 110px    
+                        box-shadow: 0 0 2px $mc1
+                    &-text
+                        background: white
+                        display: flex
+                        flex-direction: column
+                        justify-content: space-evenly
+                        font-family: 'Roboto', sans-serif
+                        color: black
+                        &__title
+                            font-weight: bold
+                            font-size: 64px
+                            line-height: 75px
+                            text-align: center
+                            letter-spacing: 0.05em
+                            text-transform: uppercase
+                        &__subtitle
+                            font-size: 18px
+                            line-height: 21px
+                            text-align: center
+                            letter-spacing: 0.05em
+                        &__mark
+                            font-size: 12px
+                            line-height: 14px
+                            text-align: center
+            &-left
+                width: 45%
+                display: flex
+                height: 100%
+                flex-direction: column
+                justify-content: center
+                @media screen and ( max-width: 740px )
+                    width: 100%
+                span
+                    font-weight: bold
+                    font-size: 40px
+                    line-height: 49px
+                    letter-spacing: 0.05em
+                    text-transform: uppercase
+                    padding: 7% 0
+                p
+                    font-size: 16px
+                    line-height: 23px
+
+footer
+    width: 100%
+    background: $mc1
+    height: 161px
+    @media screen and ( max-width: 858px )
+        height: 240px
+   
+    .wrapper
+        @media screen and ( max-width: 858px )
+            flex-direction: column
+            justify-content: space-evenly
+            align-items: center
+        .footer-left-info,
+        .footer-right-info
+            @media screen and ( max-width: 858px )
+                display: flex
+                flex-direction: column       
+                align-items: center
+                width: 100%
+            @include main-font
+            width: 50%
+            display: flex
+        .footer-left-info
+            div
+                display: flex
+                justify-content: center
+                flex-direction: column
+                padding-left: 5%
+                span
+                    width: 100%
+                    padding: 1% 0
+                    font-size: 14px
+                    line-height: 16px
+        .footer-right-info
+            display: flex
+            justify-content: space-between
+            &-left
+                display: flex
+                flex-direction: column
+                justify-content: center
+                span
+                    width: 100%
+                    display: block
+                    padding: 2% 0
+            &-right
+                display: flex
+                flex-direction: column
+                justify-content: center
+                div
+                    width: 100%
+                    span
+                        color: red
+                    
+

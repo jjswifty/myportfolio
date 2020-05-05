@@ -1,0 +1,317 @@
+@mixin wh100
+  min-width: 100%
+  min-height: 100vh
+
+$mc: #2E2E2E
+/* ERIC MEYER TY FOR THIS STYLES <3 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video 
+	margin: 0
+	padding: 0
+	border: 0
+	font-size: 100%
+	font: inherit
+	vertical-align: baseline
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section 
+	display: block
+
+body 
+	line-height: 1
+
+ol, ul 
+	list-style: none
+
+blockquote, q 
+	quotes: none
+
+blockquote:before, blockquote:after,
+q:before, q:after 
+	content: ''
+	content: none
+
+table 
+	border-collapse: collapse
+	border-spacing: 0
+
+/* END OF ERIC MEIER */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap')
+
+::-webkit-scrollbar
+  width: 12px
+  
+
+::-webkit-scrollbar-thumb
+  background: #9484843d
+  border: 1px solid black
+  border-radius: 20px
+  transition: 0.3s all
+  &:hover
+    background: rgb(82, 78, 78)
+
+  
+
+.white
+  color: white
+  
+main
+  display: flex
+  flex-wrap: wrap
+  min-height: 100%
+  min-width: 100%
+  margin: 0
+  padding: 0
+
+nav
+  position: fixed
+  top: 0
+  left: 0
+  min-width: 100%
+  min-height: 60px
+  display: flex
+  align-items: center
+  justify-content: center
+  transition: all 0.3s
+  div
+    width: 50%
+    display: flex
+    justify-content: space-around
+    a
+      transition: all 0.1s
+      text:
+        decoration: none
+        transform: uppercase
+      color: black
+      font:
+        family: 'Raleway', sans-serif
+        size: 17px
+      @media screen and ( max-width: 250px )
+        font-size: 14px
+      &:hover
+        transform: scale(1.2)
+        text-shadow: 1px 2px black
+      
+.main, .skills, .works, .contacts 
+  border-bottom: 1px solid white
+  
+.main
+  @include wh100
+  background: linear-gradient(90deg, rgba(54,54,57,1) 1%, rgba(255,255,255,1) 75%, rgba(229,237,237,1) 100%)
+  background-attachment: fixed
+  display: flex 
+  justify-content: center
+  align-items: center
+  div
+    min-width: 90%
+    display: flex 
+    justify-content: flex-end
+    span
+      font:
+        size: 60px
+        family: 'Raleway', sans-serif
+      @media screen and ( max-width: 500px )
+        font-size: 40px
+        line-height: 40px        
+        text-align: center
+
+
+.skills
+  min-width: 100%
+  min-height: 100vh
+  background:
+    image: url(../img/leaves-bg.png)
+   
+  display: flex
+  transition: all 0.3s
+  justify-content: center
+  align-items: center
+
+    
+  font:
+    family: 'Raleway', sans-serif
+    size: 2em
+  @media screen and ( max-width: 500px )
+    font-size: 20px
+    line-height: 26px
+    
+  .wrap
+    display: flex
+    align-items: center
+    min-height: 100%
+    min-width: 50%
+    max-width: 90%
+    .info
+      border: 1px solid black
+      background-color: black
+      color: white
+      padding: 5% 10%
+      transition: all 0.3s
+      box-shadow: 0 0 20px black
+      &:hover
+        box-shadow: 0 0 40px black
+
+.works
+  @include wh100
+  background-image: url(../img/bg.png)
+  display: flex
+  justify-content: center
+  align-items: center
+  div
+    display: flex
+    justify-content: space-around
+    width: 90%
+    height: 70%
+    font:
+      size: 2em
+      family: 'Raleway', sans-serif
+    @media screen and ( max-width: 500px )
+      font-size: 40px
+    text-align: center
+    align-items: center
+    .first-work,
+    .second-work
+      
+      transition: all 0.3s
+      &:hover
+        transform: scale(1.1)
+       
+    .first-work
+      background: url(../img/work1bg.jpg)
+      background:
+        size: cover
+        position: center
+    .second-work
+      background: url(../img/work2bg.jpg)
+      background:
+        size: cover
+        position: center
+  
+    div
+      color: black
+      text-decoration: none
+      width: 30%
+      height: 70%
+      a
+        width: 100%
+        align-items: center
+        justify-content: center
+        display: flex
+        height: 100%
+        text-decoration: none
+        color: black
+
+
+.about
+  min-width: 100%
+  min-height: 70vh
+  transition: all 0.3s
+  display: flex
+  align-items: center
+  background:
+    repeat: no-repeat
+    image: url(../img/apple-on-wood.jpg)
+    position: center
+    size: cover
+  div
+    padding: 2% 3%
+    background-color: black
+    border-bottom-right-radius: 80px
+    border-top-right-radius: 80px
+    @media screen and ( max-width: 500px )
+      border-bottom-right-radius: 50px
+      border-top-right-radius: 50px
+    box-shadow: 0 0 10px black
+    span
+      color: white
+      font:
+        family: 'Raleway', sans-serif
+        size: 2em
+      @media screen and ( max-width: 500px )
+        font-size: 20px
+        line-height: 26px
+    
+.contacts
+  min-width: 100%
+  min-height: 30vh
+  background-image: url(../img/papyrus-dark.png)
+  display: flex
+  align-items: center
+  justify-content: center
+  .wrapper 
+    padding: 10px
+    .social
+      display: flex
+      justify-content: space-around
+      margin-top: 5%
+      a
+        color: white
+        i
+          transition: all 0.3s
+          cursor: pointer
+          &:hover
+            transform: scale(1.1)
+    span
+      color: white
+      font:
+        family: 'Raleway', sans-serif
+        size: 2em
+      @media screen and ( max-width: 500px )
+        font-size: 20px
+        line-height: 26px
+        
+
+.fa-vk:hover
+  color: #597da3
+
+.fa-github:hover
+  color: #6cc644
+
+.fa-telegram:hover
+  color: #0088cc
+    
+@media screen and (max-width: 600px) 
+  nav
+    div
+      width: 100%
+      display: flex
+      justify-content: space-evenly
+      font-size: 14px
+      a
+        margin: 0
+  .wrap
+    flex-wrap: wrap
+  .works
+    min-height: 100vh
+    align-items: normal
+    div
+      margin-top: 2%
+      flex-wrap: wrap
+      max-height: 100%
+      .first-work, .second-work, .third-work
+        width: 100%
+        height: 45%
+
+@media screen and ( max-width: 900px )
+  .works
+    
+    align-items: center
+    div
+      margin-top: 2%
+      flex-wrap: wrap
+      max-height: 100%
+      .first-work, .second-work, .third-work
+        width: 100%
+        height: 45%
+

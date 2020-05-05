@@ -1,0 +1,484 @@
+/* ERIC MEYER TY FOR THIS STYLES <3 */
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* END OF ERIC MEIER */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9484843d;
+  border: 1px solid black;
+  border-radius: 20px;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #524e4e;
+}
+
+.white {
+  color: white;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-height: 100%;
+  min-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+nav div {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+nav div a {
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  font-family: 'Raleway', sans-serif;
+  font-size: 17px;
+}
+
+@media screen and (max-width: 250px) {
+  nav div a {
+    font-size: 14px;
+  }
+}
+
+nav div a:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  text-shadow: 1px 2px black;
+}
+
+.main, .skills, .works, .contacts {
+  border-bottom: 1px solid white;
+}
+
+.main {
+  min-width: 100%;
+  min-height: 100vh;
+  background: -webkit-gradient(linear, left top, right top, color-stop(1%, #363639), color-stop(75%, white), to(#e5eded));
+  background: linear-gradient(90deg, #363639 1%, white 75%, #e5eded 100%);
+  background-attachment: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main div {
+  min-width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.main div span {
+  font-size: 60px;
+  font-family: 'Raleway', sans-serif;
+}
+
+@media screen and (max-width: 500px) {
+  .main div span {
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+  }
+}
+
+.skills {
+  min-width: 100%;
+  min-height: 100vh;
+  background-image: url(../img/leaves-bg.png);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2em;
+}
+
+@media screen and (max-width: 500px) {
+  .skills {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.skills .wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100%;
+  min-width: 50%;
+  max-width: 90%;
+}
+
+.skills .wrap .info {
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+  padding: 5% 10%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-box-shadow: 0 0 20px black;
+          box-shadow: 0 0 20px black;
+}
+
+.skills .wrap .info:hover {
+  -webkit-box-shadow: 0 0 40px black;
+          box-shadow: 0 0 40px black;
+}
+
+.works {
+  min-width: 100%;
+  min-height: 100vh;
+  background-image: url(../img/bg.png);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.works div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 90%;
+  height: 70%;
+  font-size: 2em;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 500px) {
+  .works div {
+    font-size: 40px;
+  }
+}
+
+.works div .first-work,
+.works div .second-work {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.works div .first-work:hover,
+.works div .second-work:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.works div .first-work {
+  background: url(../img/work1bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.works div .second-work {
+  background: url(../img/work2bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.works div div {
+  color: black;
+  text-decoration: none;
+  width: 30%;
+  height: 70%;
+}
+
+.works div div a {
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  text-decoration: none;
+  color: black;
+}
+
+.about {
+  min-width: 100%;
+  min-height: 70vh;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-repeat: no-repeat;
+  background-image: url(../img/apple-on-wood.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.about div {
+  padding: 2% 3%;
+  background-color: black;
+  border-bottom-right-radius: 80px;
+  border-top-right-radius: 80px;
+  -webkit-box-shadow: 0 0 10px black;
+          box-shadow: 0 0 10px black;
+}
+
+@media screen and (max-width: 500px) {
+  .about div {
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+  }
+}
+
+.about div span {
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2em;
+}
+
+@media screen and (max-width: 500px) {
+  .about div span {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.contacts {
+  min-width: 100%;
+  min-height: 30vh;
+  background-image: url(../img/papyrus-dark.png);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contacts .wrapper {
+  padding: 10px;
+}
+
+.contacts .wrapper .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 5%;
+}
+
+.contacts .wrapper .social a {
+  color: white;
+}
+
+.contacts .wrapper .social a i {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.contacts .wrapper .social a i:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.contacts .wrapper span {
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2em;
+}
+
+@media screen and (max-width: 500px) {
+  .contacts .wrapper span {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.fa-vk:hover {
+  color: #597da3;
+}
+
+.fa-github:hover {
+  color: #6cc644;
+}
+
+.fa-telegram:hover {
+  color: #0088cc;
+}
+
+@media screen and (max-width: 600px) {
+  nav div {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    font-size: 14px;
+  }
+  nav div a {
+    margin: 0;
+  }
+  .wrap {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .works {
+    min-height: 100vh;
+    -webkit-box-align: normal;
+        -ms-flex-align: normal;
+            align-items: normal;
+  }
+  .works div {
+    margin-top: 2%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-height: 100%;
+  }
+  .works div .first-work, .works div .second-work, .works div .third-work {
+    width: 100%;
+    height: 45%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .works {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .works div {
+    margin-top: 2%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-height: 100%;
+  }
+  .works div .first-work, .works div .second-work, .works div .third-work {
+    width: 100%;
+    height: 45%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
